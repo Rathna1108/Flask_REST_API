@@ -4,6 +4,14 @@ from flask import Flask,request,jsonify
 from pymongo import MongoClient
 from flask_jwt_extended import create_access_token, JWTManager,jwt_required,get_jwt_identity
 
+from os import environ 
+
+PORT = environ.get('PORT')
+FLASK_PORT = environ.get('FLASK_PORT')
+print(PORT, FLASK_PORT)
+
+
+
 
 app = Flask(__name__)
 
